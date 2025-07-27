@@ -1,0 +1,25 @@
+{
+    "AngularJS Loading Mask Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "loading-mask",
+      "body": [
+        "await LoadingMaskService.wrapper(async () => {",
+        "    await () => {",
+        "    };",
+        "});"
+      ],
+      "description": "Quickly create an AngularJS Loading Mask Wrapper"
+    },
+    
+    "AngularJS Loading Mask Wrapper(TS)": {
+        "scope": "typescript",
+        "prefix": "loading-mask",
+        "body": [
+          "await this.LoadingMaskService.wrapper(async () => {",
+          "    await () => {",
+          "    };",
+          "});"
+        ],
+        "description": "Quickly create an AngularJS Loading Mask Wrapper"
+      }
+  }
