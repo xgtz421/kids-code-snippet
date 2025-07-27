@@ -1,7 +1,7 @@
 {
-  "name": "kids-angularjs-code-snippet",
+  "name": "kids-code-snippet",
   "publisher": "BrucePi", 
-  "displayName": "kids-angularjs-code-snippet",
+  "displayName": "kids-code-snippet",
   "description": "",
   "icon": "images/icon.png",
   "version": "0.0.1",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xgtz421/kids-angularjs-code-snippet.git"
+    "url": "https://github.com/xgtz421/kids-code-snippet.git"
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

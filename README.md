@@ -1,4 +1,4 @@
-# kids-angularjs-code-snippet README
+# kids-code-snippet README
 
 一个用于在Kids项目中生成代码片段的VSCode插件。
 
