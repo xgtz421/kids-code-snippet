@@ -1,0 +1,18 @@
+{
+    "Angular Less modal-dialog": {
+        "scope": "less",
+        "prefix": ["my-modal-dialog-css"],
+        "body": [
+            ".modal-dialog {",
+            "    .modal-content {",
+            "        min-width: 960px;",
+            "    }",
+            "    .modal-body {",
+            "        max-height: 60vh;",
+            "        overflow: auto;",
+            "    }",
+            "}"
+        ],
+        "description": "覆写自定义modal dialog的高度和宽度"
+  }
+}

@@ -1,0 +1,250 @@
+{
+    "AngularJs JP ()": {
+        "scope": "html",
+        "prefix": ["my-parenthesis"],
+        "body": [
+            "（）"
+        ],
+        "description": "日文圆括号"
+    },
+    "AngularJs JP 「」": {
+        "scope": "html",
+        "prefix": ["my-brackets"],
+        "body": [
+            "「」"
+        ],
+        "description": "日文方括号"
+    },
+    "AngularJS select element Wrapper(value is object)": {
+        "scope": "html",
+        "prefix": "my-select-selected-object",
+        "body": [
+            "<select",
+            "    class=\"form-control\"",
+            "    ng-model=\"ctrl.selectedPermissionGroup\"",
+            "    ng-options=\"option.label for option in ctrl.permissionGroups\"",
+            "></select>"
+        ],
+        "description": "Select元素(选中值为对象)"
+    },
+
+    "AngularJS select element Wrapper(value is id)": {
+        "scope": "html",
+        "prefix": "my-select-selected-id",
+        "body": [
+            "<select",
+            "    class=\"form-control\"",
+            "    ng-model=\"ctrl.selectedGroupId\"",
+            "    ng-options=\"option.value as option.label for option in ctrl.permissionGroups\"",
+            "></select>"
+        ],
+        "description": "Select元素(选中值为id)"
+    },
+
+    "AngularJS中自定义select的option-label": {
+        "scope": "html",
+        "prefix": "my-select-option-label",
+        "body": [
+            "<select",
+            "    class=\"form-control\"",
+            "    ng-model=\"ctrl.selectedPermissionGroup\"",
+            "    ng-options=\"option as (option.code | NumberLeftPad0:2) + '\u3000' + option.label for option in ctrl.permissionGroups\"",
+            "    required",
+            "></select>"
+        ],
+        "description": "AngularJS中自定义select的option-label"
+    },
+
+
+    "AngularJS go-back-button Wrapper": {
+        "scope": "html",
+        "prefix": "my-button-goBack",
+        "body": [
+            "<common-button text=\"LK_BACK\" theme=\"default\" icon=\"icon-cancel\" on-click=\"\\$goBack()\"></common-button>"
+        ],
+        "description": "返回按钮"
+    },
+    "AngularJS ok-button Wrapper": {
+        "scope": "html",
+        "prefix": "my-button-ok",
+        "body": [
+            "<common-button text=\"LK_OK\" theme=\"primary\" icon=\"icon-tick\" on-click=\"ctrl.ok()\"></common-button>"
+        ],
+        "description": "OK按钮"
+    },
+    "AngularJS cancel-button Wrapper": {
+        "scope": "html",
+        "prefix": "my-button-cancel",
+        "body": [
+            "<common-button text=\"LK_CANCEL\" theme=\"default\" icon=\"icon-cancel\" on-click=\"ctrl.cancel()\"></common-button>"
+        ],
+        "description": "Cancel按钮"
+    },
+    "AngularJS dismiss-button Wrapper": {
+        "scope": "html",
+        "prefix": "my-button-dismiss",
+        "body": [
+            "<common-button theme=\"default\" icon=\"icon-cancel\" on-click=\"\\$dismiss()\" text=\"LK_CANCEL\"></common-button>"
+        ],
+        "description": "Dismiss按钮"
+    },
+    "AngularJS search-button Wrapper": {
+        "scope": "html",
+        "prefix": "my-button-search",
+        "body": [
+            "<common-button text=\"LK_SEARCH\" theme=\"danger\" icon=\"icon-search\" on-click=\"ctrl.search()\"></common-button>"
+        ],
+        "description": "搜索按钮"
+    },
+
+
+
+    "AngularJS Modal Header Wrapper": {
+        "scope": "html",
+        "prefix": "my-modal-header",
+        "body": [
+            "<div class=\"modal-header\">",
+            "    <button type=\"button\" class=\"close\" aria-label=\"Close\" ng-click=\"\\$dismiss()\"><span aria-hidden=\"true\">&times;</span></button>",
+            "    <h4 class=\"modal-title\">{{::'SELECT_RELATION_SCHOOL'| translate}}</h4>",
+            "</div>"
+        ],
+        "description": "描述：Modal Header"
+    },
+    "AngularJS Modal Body Wrapper": {
+        "scope": "html",
+        "prefix": "my-modal-body",
+        "body": [
+            "<div class=\"modal-body\">",
+            "</div>"
+        ],
+        "description": "描述：Modal Body"
+    },
+    "AngularJS Modal Footer Wrapper": {
+        "scope": "html",
+        "prefix": "my-modal-footer-kms",
+        "body": [
+            "<div class=\"modal-footer\">",
+            "    <button class=\"btn btn-default\" ng-click=\"\\$dismiss()\">",
+            "        <span class=\"icon icon-cancel\" aria-hidden=\"true\"></span>{{::\"CANCEL\"|translate}}",
+            "    </button>",
+            "    <button class=\"btn btn-primary\" ng-click=\"ctrl.save()\">",
+            "        <span class=\"icon icon-tick\" aria-hidden=\"true\"></span>{{::\"COMMON_CONFIRM\"|translate}}",
+            "    </button>",
+            "</div>"
+        ],
+        "description": "描述：Modal Footer"
+    },
+    "AngularJS Modal Form Wrapper": {
+        "scope": "html",
+        "prefix": "my-modal-form",
+        "body": [
+            "<form class=\"form-horizontal\">",
+            "    <div class=\"form-group\">",
+            "        <label class=\"col-sm-2 control-label\">{{::'AM_INSTITUTION_CODE' | translate}}</label>",
+            "        <div class=\"col-sm-10\">",
+            "            <input type=\"text\" class=\"form-control\" ng-model=\"ctrl.institutionCode\">",
+            "        </div>",
+            "    </div>",
+            "</form>"
+        ],
+        "description": "描述:Form表单"
+    },
+    "AngularJS Flex Grid Wrapper": {
+        "scope": "html",
+        "prefix": "my-flex-grid-origin",
+        "body": [
+            "<div class=\"flex-grid-container\">",
+            "    <wj-flex-grid class=\"kr-flex-grid\" ",
+            "        headers-visibility=\"Column\" ",
+            "        selection-mode=\"None\"",
+            "        allow-delete=\"false\"",
+            "        allow-sorting=\"false\"",
+            "        is-read-only=\"true\"",
+            "        allow-dragging=\"None\"",
+            "        initialized=\"ctrl.onInitialized(s, e)\"",
+            "        ng-click=\"ctrl.onRowClick($event)\"",
+            "        ng-dblclick=\"ctrl.onDbClicked($event)\"",
+            "        items-source=\"ctrl.institutions\">",
+            "        <!--select all-->",
+            "        <wj-flex-grid-column min-width=\"50\" max-width=\"50\" width=\"50\">",
+            "            <wj-flex-grid-cell-template cell-type=\"ColumnHeader\">",
+            "                <checkbox attr-name=\"isAllCheckbox\" attr-disabled=\"templates.length === 0\"",
+            "                    clicked=\"ctrl.toggleChoiceAll()\" checked=\"ctrl.isAllChecked\"></checkbox>",
+            "            </wj-flex-grid-cell-template>",
+            "            <wj-flex-grid-cell-template cell-type=\"Cell\">",
+            "                <checkbox attr-name=\"{{'ins_' + $item.id}}\" checked=\"$item.isChecked\"",
+            "                    clicked=\"ctrl.toggleChoice($item)\"></checkbox>",
+            "            </wj-flex-grid-cell-template>",
+            "        </wj-flex-grid-column>",
+            "        <!--アカウントID-->",
+            "        <wj-flex-grid-column name=\"institutionCode\" min-width=\"150\" width=\"150\" max-width=\"150\">",
+            "            <wj-flex-grid-cell-template cell-type=\"ColumnHeader\">",
+            "                {{::'AM_INSTITUTION_CODE' | translate}}",
+            "            </wj-flex-grid-cell-template>",
+            "            <wj-flex-grid-cell-template cell-type=\"Cell\">",
+            "                {{ $item.code | padLeftZero : 6 }}",
+            "            </wj-flex-grid-cell-template>",
+            "        </wj-flex-grid-column>",
+            "        <!--アカウント名称(学校法人名)-->",
+            "        <wj-flex-grid-column name=\"name\" binding=\"name\" min-width=\"130\" width=\"*\">",
+            "            <wj-flex-grid-cell-template cell-type=\"ColumnHeader\">",
+            "                {{::'AM_INSTITUTION_NAME' | translate}}",
+            "            </wj-flex-grid-cell-template>",
+            "        </wj-flex-grid-column>",
+            "        <!--園の名称(ご利用学校名)-->",
+            "        <wj-flex-grid-column name=\"institutionShortName\" binding=\"shortName\" min-width=\"150\" width=\"*\" max-width=\"290\">",
+            "            <wj-flex-grid-cell-template cell-type=\"ColumnHeader\">",
+            "                {{::'AM_INSTITUTION_SHORTNAME' | translate}}",
+            "            </wj-flex-grid-cell-template>",
+            "        </wj-flex-grid-column>",
+            "        <!--契約区分-->",
+            "        <wj-flex-grid-column name=\"institutionStatus\" min-width=\"150\" width=\"150\" max-width=\"150\">",
+            "            <wj-flex-grid-cell-template cell-type=\"ColumnHeader\">",
+            "                {{::'AM_CONTRACT_STATUS' | translate}}",
+            "            </wj-flex-grid-cell-template>",
+            "            <wj-flex-grid-cell-template cell-type=\"Cell\">",
+            "                {{ $item.status | AccountStatus }}",
+            "            </wj-flex-grid-cell-template>",
+            "        </wj-flex-grid-column>",
+            "    </wj-flex-grid>",
+            "    <div class=\"text-center text-no-data\"",
+            "        ng-show=\"!ctrl.isLoading && (!ctrl.institutions || !ctrl.institutions.length)\">",
+            "        <h3>{{ ::\"TEXT_NO_DATA\" | translate}}</h3>",
+            "    </div>",
+            "</div>"
+        ],
+        "description": "描述：Flex Grid 原始版本"
+    },
+    "AngularJS Flex Grid Radio Wrapper": {
+        "scope": "html",
+        "prefix": "my-flex-grid-radio",
+        "body": [
+            "<wj-flex-grid-cell-template cell-type=\"Cell\">",
+            "    <div class=\"radio-container\" ng-click=\"ctrl.onChoicePrincipal(\\$row.index, $item)\">",
+            "        <div class=\"alert-check-wrapper btn-radio\">",
+            "            <div class=\"icon icon-radiobutton-off\"",
+            "                ng-class=\"{'icon-radiobutton-on':ctrl.principal.id == \\$item.id}\"></div>",
+            "            <input type=\"radio\"",
+            "                value=\"{{\\$item.id}}\"",
+            "                name=\"type\"",
+            "                ng-model=\"ctrl.principal.id\">",
+            "        </div>",
+            "    </div>",
+            "</wj-flex-grid-cell-template>"
+        ],
+        "description": "描述:在Flex Grid中使用快速输入RadioButton,注意如果支持行点击事件,请适用my-flex-grid-radio-div"  
+    },
+    "AngularJS Flex Grid Radio Div Wrapper": {
+        "scope": "html",
+        "prefix": "my-flex-grid-radio-div",
+        "body": [
+            "<wj-flex-grid-cell-template cell-type=\"Cell\">",
+            "    <div class=\"alert-check-wrapper btn-radio\">",
+            "        <div class=\"icon icon-radiobutton-off\"",
+            "            ng-class=\"{'icon-radiobutton-on':ctrl.principal.id == \\$item.id, 'icon-radio-disabled': \\$item.id == ctrl.currentPrincipalId}\"></div>",
+            "    </div>",
+            "</wj-flex-grid-cell-template>"
+        ],
+        "description": "描述:在Flex Grid中使用快速输入RadioButton,注意如果支持行点击事件,请适用my-flex-grid-radio-div"  
+    }
+}

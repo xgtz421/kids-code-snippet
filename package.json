@@ -18,6 +18,18 @@
       {
         "language": "javascript",
         "path": "./snippets/js-common.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/ts-common.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html-common.json"
+      },
+      {
+        "language": "less",
+        "path": "./snippets/less-common.json"
       }
     ]
   },

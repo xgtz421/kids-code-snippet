@@ -1,7 +1,23 @@
 {
+  "AngularJs JP ()": {
+        "scope": "javascript",
+        "prefix": ["my-parenthesis"],
+        "body": [
+            "（）"
+        ],
+        "description": "AngularJS JP parenthesis"
+  },
+  "AngularJs JP 「」": {
+      "scope": "javascript",
+      "prefix": ["my-brackets"],
+      "body": [
+          "「」"
+      ],
+      "description": "AngularJS JP brackets"
+  },
     "AngularJS Loading Mask Wrapper(JS)": {
       "scope": "javascript",
-      "prefix": "loading-mask",
+      "prefix": "my-loading-mask",
       "body": [
         "await LoadingMaskService.wrapper(async () => {",
         "    await () => {",
@@ -11,15 +27,155 @@
       "description": "Quickly create an AngularJS Loading Mask Wrapper"
     },
     
-    "AngularJS Loading Mask Wrapper(TS)": {
-        "scope": "typescript",
-        "prefix": "loading-mask",
-        "body": [
-          "await this.LoadingMaskService.wrapper(async () => {",
-          "    await () => {",
-          "    };",
-          "});"
-        ],
-        "description": "Quickly create an AngularJS Loading Mask Wrapper"
-      }
+    "AngularJS Open Modal Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "my-open-modal",
+      "body": [
+          "const { isConfirm } = await CommonToolService.openModal({",
+          "    templateUrl : '',",
+          "    controller : '',",
+          "    windowClass : '',",
+          "    size : 'md',",
+          "    passedDataToCtrl : {",
+          "        displaySetting : '',",
+          "    },",
+          "});",
+          "if (!isConfirm) {",
+          "    return;",
+          "};"
+      ],
+      "description": "描述：打开自定义模态框（使用指定Controller）"
+    },
+
+
+    "AngularJS KrToast Warning Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "my-toast-warning",
+      "body": [
+        "KrToast.warning(msg || msgKey);"
+      ],
+      "description": "AngularJS KrToast Warning Wrapper"
+    },
+  
+    "AngularJS KrToast Success Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "my-toast-success",
+      "body": [
+        "KrToast.success(msg || msgKey);"
+      ],
+      "description": "AngularJS KrToast Warning Wrapper"
+    },
+  
+    "AngularJS KrToast Show Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "my-toast-show",
+      "body": [
+        "KrToast.show(msg || msgKey);"
+      ],
+      "description": "AngularJS KrToast Show Wrapper, 默认是success."
+    },
+  
+    "AngularJS KrToast Danger Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "my-toast-danger",
+      "body": [
+        "KrToast.danger(msg || msgKey);"
+      ],
+      "description": "AngularJS KrToast Danger Wrapper"
+    },
+
+    "AngularJS Open uibModal Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "my-open-uib-modal",
+      "body": [
+        "$scope.showPrincipalModal = async function () {",
+        "    const res = await $uibModal.open({",
+        "        templateUrl : 'client/manage/pages/principal-choice-modal/principal-choice-modal.html',",
+        "        controller : 'PrincipalChoiceModalController',",
+        "        controllerAs : 'ctrl',",
+        "        scope : $scope,",
+        "        size : 'lg',",
+        "        windowClass : 'principal-choice-modal',",
+        "        backdrop : 'static',",
+        "        resolve : {",
+        "            institutionId : () => $scope.customer.institutionId,",
+        "        },",
+        "    }).result;",
+        "    if (res) {",
+        "        $scope.customer.adminEmail = res.email;",
+        "        $scope.customer.adminName = res.name;",
+        "    }",
+        "};"
+      ],
+      "description": "描述：打开自定义模态框（使用指定Controller）"
+    },
+    
+    "AngularJS Watch Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "my-watch",
+      "body": [
+        "\\$scope.\\$watch(() => \\$scope.teacherId, CommonToolService.avoidWatchInitTrigger(() => {",
+        "    loadTeacherDetail();",
+        "}));"
+      ],
+      "description": "AngularJS Watch Wrapper"
+    },
+
+    "AngularJS Translate replace Wrapper(JS)": {
+      "scope": "javascript",
+      "prefix": "my-translate-replace",
+      "body": [
+        "const title = \\$translate.instant('TEACHER_BATCH_PERMISSION_GROUP_SETTING_SUCCESS', { successCount });"
+      ],
+      "description": "AngularJS Translate replace Wrapper"
+    },
+
+    "AngularJS Flex Grid onInitialized": {
+      "scope": "javascript",
+      "prefix": "my-flex-grid-onInitialized",
+      "body": [
+        "onInitialized(s) {",
+        "    _flexGrid = s;",
+        "}"
+      ],
+      "description": "AngularJS Flex Grid onInitialized"
+    },
+
+    "AngularJS Flex Grid onRowClicked(JS)": {
+      "scope": "javascript",
+      "prefix": "my-flex-grid-onRowClicked",
+      "body": [
+        "onRowClicked(\\$event: Event) {",
+        "    if (!_flexGrid) {",
+        "        return;",
+        "    }",
+        "    const ht = _flexGrid.hitTest(\\$event);",
+        "    if (ht.cellType === wijmo.grid.CellType.Cell) {",
+        "        const rowIndex = ht.row;",
+        "        principal = principalList[rowIndex];",
+        "        _flexGrid.select(rowIndex, -1);",
+        "    }",
+        "}"
+      ],
+      "description": "AngularJS Flex Grid onRowClicked"
+    },
+    "AngularJS Flex Grid onDbClicked(JS)": {
+      "scope": "javascript",
+      "prefix": "my-flex-grid-onDbClicked",
+      "body": [
+        "onRowDbClicked(\\$event: Event) {",
+        "    if (!_flexGrid) {",
+        "        return;",
+        "    }",
+        "    const ht = _flexGrid.hitTest(\\$event);",
+        "    if (ht.cellType === wijmo.grid.CellType.Cell) {",
+        "        const rowIndex = ht.row;",
+        "        principal = principalList[rowIndex];",
+        "        _flexGrid.select(rowIndex, -1);",
+        "    }",
+        "}"
+      ],
+      "description": "AngularJS Flex Grid onDbClicked"
+    }
+
   }

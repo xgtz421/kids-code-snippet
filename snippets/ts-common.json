@@ -1,0 +1,257 @@
+{
+  "AngularJs JP ()": {
+        "scope": "typescript",
+        "prefix": ["my-parenthesis"],
+        "body": [
+            "（）"
+        ],
+        "description": "AngularJS JP parenthesis"
+  },
+  "AngularJs JP 「」": {
+      "scope": "typescript",
+      "prefix": ["my-brackets"],
+      "body": [
+          "「」"
+      ],
+      "description": "AngularJS JP brackets"
+  },
+  "AngularJS Select Element Option Type Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-select-option-type",
+    "body": [
+      "type SelectOption = {",
+      "    label: string;",
+      "    value: number;",
+      "};"
+    ],
+    "description": "AngularJS Select Element Option Type"
+  },
+
+  "AngularJS StopCloseFn Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-stop-close-fn",
+    "body": ["stopClose: core.modal.StopCloseFn"],
+    "description": "AngularJS StopCloseFn"
+  },
+
+  "AngularJS Loading Mask Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-loading-mask",
+    "body": [
+      "await this.LoadingMaskService.wrapper(async () => {",
+      "    await () => {",
+      "    };",
+      "});"
+    ],
+    "description": "Quickly create an AngularJS Loading Mask Wrapper"
+  },
+
+  "AngularJS Watch Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-watch",
+    "body": [
+      "this.\\$scope.\\$watch(() => this.teacherId, this.CommonToolService.avoidWatchInitTrigger(() => {",
+      "    this.loadTeacherDetail();",
+      "}));"
+    ],
+    "description": "AngularJS Watch Wrapper"
+  },
+
+
+  "AngularJS Translate replace Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-translate-replace",
+    "body": [
+      "const title = this.\\$translate.instant('TEACHER_BATCH_PERMISSION_GROUP_SETTING_SUCCESS', { successCount });"
+    ],
+    "description": "AngularJS Translate replace Wrapper"
+  },
+
+  "AngularJS KrToast Warning Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-toast-warning",
+    "body": [
+      "this.KrToast.warning(msg || msgKey);"
+    ],
+    "description": "AngularJS KrToast Warning Wrapper"
+  },
+
+  "AngularJS KrToast Success Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-toast-success",
+    "body": [
+      "this.KrToast.success(msg || msgKey);"
+    ],
+    "description": "AngularJS KrToast Warning Wrapper"
+  },
+
+  "AngularJS KrToast Show Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-toast-show",
+    "body": [
+      "this.KrToast.show(msg || msgKey);"
+    ],
+    "description": "AngularJS KrToast Show Wrapper, 默认是success."
+  },
+
+  "AngularJS KrToast Danger Wrapper(TS)": {
+    "scope": "typescript",
+    "prefix": "my-toast-danger",
+    "body": [
+      "this.KrToast.danger(msg || msgKey);"
+    ],
+    "description": "AngularJS KrToast Danger Wrapper"
+  },
+
+  "angular.js ts service": {
+    "scope": "typescript",
+    "prefix": ["my-angular-service"],
+    "body": [
+      "/**",
+      " * @author BruceWang",
+      " * @date ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      " */",
+      "",
+      "namespace ${1:${TM_FILEPATH/(.+?\\\\client\\\\)(\\w+)(\\\\.+)/$2/}} {",
+      "",
+      "\t// #region types",
+      "\t// #endregion",
+      "",
+      "\t@autoBindClass",
+      "\texport class TeacherStorageService {",
+      "",
+      "\t\t// #region injections",
+      "\t\tstatic \\$inject = [",
+      "\t\t\t'\\$http',",
+      "\t\t];",
+      "\t\tconstructor(",
+      "\t\t\tprivate \\$http: ng.IHttpService,",
+      "\t\t) {}",
+      "\t\t// #endregion",
+      "",
+      "\t\t// #region private props",
+      "\t\t// #endregion",
+      "",
+      "\t\t// #region public methods & props",
+      "\t\t// #endregion",
+      "",
+      "\t\t// #region private methods",
+      "\t\t// #endregion",
+      "\t}",
+      "",
+      "\tangular.module('${1}').service('TeacherStorageService', TeacherStorageService);",
+      "}"
+    ],
+    "description": "AngularJS Service Controller"
+  },
+  "angular.js ts modal": {
+		"scope": "typescript",
+		"prefix": ["my-angular-modal-controller"],
+		"body": [
+            "/**",
+            " * @author BruceWang",
+            " * @date ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+            " */",
+			"",
+			"namespace ${1:${TM_FILEPATH/(.+?\\\\client\\\\)(\\w+)(\\\\.+)/$2/}} {",
+				"",
+				"\t// #region types",
+				"\t// #endregion",
+				"",
+				"\t@autoBindClass",
+				"\tclass ${2:${TM_FILENAME_BASE/^(.*)$/${1:/pascalcase}/}} {",
+					"",
+					"\t\t// #region injections",
+					"\t\tstatic \\$inject = [",
+					"\t\t\t'\\$scope',",
+					"\t\t];",
+					"\t\tconstructor(",
+						"\t\t\tprivate \\$scope: ng.ui.bootstrap.IModalScope,",
+					"\t\t) {}",
+					"\t\t// #endregion",
+					"",
+					"\t\t// #region private props",
+					"\t\t// #endregion",
+					"",
+					"\t\t// #region vm props & methods",
+					"\t\tinit() {",
+						"\t\t\t// TODO",
+					"\t\t}",
+					"\t\t// #endregion",
+					"",
+					"\t\t// #region private methods",
+					"\t\t// #endregion",
+				"\t}",
+				"",
+				"\tangular.module('${1}').controller('${2}', ${2});",
+			"}"
+		],
+    "description": "AngularJS Modal Controller"
+	},
+
+  "AngularJS Flex Grid onInitialized": {
+    "scope": "typescript",
+    "prefix": "my-flex-grid-onInitialized",
+    "body": [
+      "onInitialized(s: wijmo.grid.FlexGrid) {",
+      "    this._flexGrid = s;",
+      "}"
+    ],
+    "description": "AngularJS Flex Grid onInitialized"
+  },
+
+  "AngularJS Flex Grid onRowClicked(TS)": {
+      "scope": "typescript",
+      "prefix": "my-flex-grid-onRowClicked",
+      "body": [
+        "onRowClicked(\\$event: Event) {",
+        "    if (!this._flexGrid) {",
+        "        return;",
+        "    }",
+        "    const ht = this._flexGrid.hitTest(\\$event);",
+        "    if (ht.cellType === wijmo.grid.CellType.Cell) {",
+        "        const rowIndex = ht.row;",
+        "        this.principal = this.principalList[rowIndex];",
+        "        this._flexGrid.select(rowIndex, -1);",
+        "    }",
+        "}"
+      ],
+      "description": "AngularJS Flex Grid onRowClicked"
+    },
+    "AngularJS Flex Grid onDbClicked(TS)": {
+      "scope": "typescript",
+      "prefix": "my-flex-grid-onRowDbClicked",
+      "body": [
+        "onRowDbClicked(\\$event: Event) {",
+        "    if (!this._flexGrid) {",
+        "        return;",
+        "    }",
+        "    const ht = this._flexGrid.hitTest(\\$event);",
+        "    if (ht.cellType === wijmo.grid.CellType.Cell) {",
+        "        const rowIndex = ht.row;",
+        "        this.principal = this.principalList[rowIndex];",
+        "        this._flexGrid.select(rowIndex, -1);",
+        "    }",
+        "}"
+      ],
+      "description": "AngularJS Flex Grid onDbClicked"
+    },
+    "AngularJS Flex Grid ItemFormatter(TS)": {
+      "scope": "typescript",
+      "prefix": "my-flex-grid-item-formatter",
+      "body": [
+        "wijmoItemFormatter(panel: wijmo.grid.GridPanel, r: number, c: number, cell: HTMLElement) {",
+        "  if (panel.cellType === window.wijmo.grid.CellType.Cell) {",
+        "      const id = this.principalList[r].id;",
+        "      let s = cell.style;",
+        "      if (id === this.currentPrincipalId) {",
+        "          s.backgroundColor = '#d5dae2';",
+        "      } else {",
+        "          s.backgroundColor = '';",
+        "      }",
+        "  }",
+        "}"
+      ],
+      "description": "AngularJS Flex Grid ItemFormatter"
+    }
+}
